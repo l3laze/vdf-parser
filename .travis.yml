@@ -22,7 +22,7 @@ script:
 after_success:
   - chmod 0755 /Users/travis/build/l3laze/vdf-parser/.nyc_output
   - yarn textcov
-  - yarn codacy
+  - yarn codecov && yarn codacy
   - rm -rf ./coverage && rm -f ./coverage.lcov
 
 notifications:

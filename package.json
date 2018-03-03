@@ -29,6 +29,7 @@
     "textcov": "nyc report --reporter=text-lcov > coverage.lcov",
     "coverage": "yarn htmlcov && yarn textcov",
     "tandc": "yarn nyc && yarn coverage",
+    "codecov": "codecov",
     "codacy": "cat coverage.lcov | codacy-coverage"
   },
   "dependencies": {},
