@@ -20,7 +20,7 @@ script:
   - yarn nyc
 
 after_success:
-  - chmod 0755 /Users/travis/build/l3laze/node-steam-config/.nyc_output
+  - chmod 0755 /Users/travis/build/l3laze/vdf-parser/.nyc_output
   - yarn textcov
   - yarn codacy
   - rm -rf ./coverage && rm -f ./coverage.lcov
