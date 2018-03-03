@@ -12,7 +12,7 @@ describe('simple-vdf2', function () {
   })
 
   afterEach(function () {
-    testData = undefined
+    testData = null
   })
 
   describe('#parse(text)', function () {
@@ -91,9 +91,12 @@ describe('simple-vdf2', function () {
         try {
           testData = VDF.parse(testData)
           Object.defineProperty(testData, 2, Object.create(null))
+
+          throw new Error('Did not fail.')
         } catch (err) {
-          console.error(err.message)
-          throw new Error(err)
+          if (err.message.indexOf('invalid key') === -1) {
+            throw new Error(err)
+          }
         }
       }
 
