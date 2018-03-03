@@ -1,55 +1,23 @@
-#### Note
+# simple-vdf2
 
-This is based on https://github.com/rossengeorgiev/vdf-parser.
-Just uploaded this package so that I can use it as a dependency in my app https://github.com/l3laze/ReliefValve.
+[![Travis-CI Build Status](https://travis-ci.org/l3laze/vdf-parser.svg?branch=master)](https://travis-ci.org/l3laze/vdf-parser?branch=master)
+[![Codacy coverage](https://img.shields.io/codacy/coverage/c44df2d9c89a4809896914fd1a40bedd.svg?branch=master)](a)
+ [![Codacy Badge](https://api.codacy.com/project/badge/Grade/031fda68bad64e7aa16fbbcf6b4718b5)](https://www.codacy.com/app/l3laze/vdf-parser)
 
-## KeyValue encoder/decoder for various languages
+[![Dev Dependencies](https://img.shields.io/david/dev/expressjs/express.svg)](https://github.com/l3laze/vdf-parser/tree/master) [![Peer Dependencies](https://img.shields.io/david/peer/webcomponents/generator-element.svg)](https://github.com/l3laze/vdf-parser/tree/master)
 
-Format: https://developer.valvesoftware.com/wiki/KeyValues
+[![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
 
-VDF may contain comments. However, they are not preserved during decoding.
+----
 
-### Online (in your browser)
+> A Simple library for Text-based VDF (Valve Data Format) (de)serialization.
 
-Go to http://rossengeorgiev.github.io/vdf-parser/
+Based on Rossen Georgiev's [simple-vdf](https://www.npmjs.com/package/simple-vdf).
 
-### Python
+## methods
 
-Moved to https://github.com/ValvePython/vdf
+### parse(string)
+Parse a string containing VDF and returns an object
 
-Install via pypi: `pip install vdf`
-
-### Javascript
-
-Using `vdf.js`
-
-```javascript
-data = VDF.parse(vdf_text);
-vdf_text = VDF.stringify(data);
-```
-
-Or the version on `npm` (https://www.npmjs.com/package/simple-vdf)
-
-```bash
-npm install simple-vdf
-```
-
-```javascript
-vdf = require('simple-vdf');
-data = vdf.parse(vdf_text);
-vdf_text = vdf.stringify(data);
-```
-
-### PHP
-
-```php
-require_once('vdf.php');
-
-$array = vdf_decode($vdf);
-$vdf = vdf_encode($array);
-$indented_vdf = vdf_encode($array, true);
-```
-
-### License
-
-See [license](LICENSE) file.
+### stringify(obj) / dump(obj)
+Serializes an object to a string of VDF
