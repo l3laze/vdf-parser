@@ -1,7 +1,7 @@
 /* eslint-env mocha */
 'use strict'
 
-const VDF = require('../lib/simple-vdf2.js')
+const VDF = require('../index.js')
 require('chai').should()
 
 let testData
