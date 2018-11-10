@@ -46,6 +46,14 @@ function parse (text, DUPLICATE_TOKEN) {
       continue
     }
 
+    // todo, implement case for handling #base 'includdes' that will
+    // import another ENTIRE file to import documents with.
+
+    // implemented for now to stop system from erroring out.
+    if(line[0] === '#' ) {
+      continue
+    }
+
     // one level deeper
     if (line[0] === '{') {
       expectBracket = false
